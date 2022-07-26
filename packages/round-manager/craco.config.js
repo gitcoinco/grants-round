@@ -3,6 +3,7 @@ module.exports = {
     configure: {
       resolve: {
         fallback: {
+          assert: require.resolve("assert"),
           crypto: require.resolve('crypto-browserify'),
           buffer: require.resolve('buffer'),
           process: require.resolve('process/browser'),

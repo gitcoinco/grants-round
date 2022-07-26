@@ -44,3 +44,7 @@
     @apply text-base;
   }
 }
+
+:root {
+  --account-center-position-top: 0;
+}
