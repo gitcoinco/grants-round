@@ -1,4 +1,9 @@
-import LitJsSdk from 'lit-js-sdk';
+import { Buffer } from 'buffer';
+const LitJsSdk = require('lit-js-sdk');
+
+
+// @ts-ignore
+window.Buffer = Buffer;
 
 const client = new LitJsSdk.LitNodeClient();
 
@@ -135,6 +140,7 @@ export class Lit {
     // Obtain Auth Signature to verify signer is wallet owner
     const authSig = await LitJsSdk.checkAndSignAuthMessage({ chain });
 
+    
     // Obtaining the Decrypted Symmetric Key
     const symmetricKey = await this.litNodeClient.getEncryptionKey({
       accessControlConditions: this.isRoundOperatorAccessControl(),
@@ -148,6 +154,7 @@ export class Lit {
       encryptedStr,
       symmetricKey
     );
+
     console.log("Decrypted String", decryptedString);
     return decryptedString;
 
