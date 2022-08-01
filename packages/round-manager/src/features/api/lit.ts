@@ -37,12 +37,11 @@ export class Lit {
    */
   isRoundOperatorAccessControl() {
     return [
-      [
         {
           contractAddress: this.contract,
           chain: this.chain,
           functionName: "hasRole",
-          functionParams: [ ROLE_OPERATOR, ":userAddress" ],
+          functionParams: [ "0xec61da14b5abbac5c5fda6f1d57642a264ebd5d0674f35852829746dfb8174a5", "0x5cdb35fADB8262A3f88863254c870c2e6A848CcA" ],
           returnValueTest: { "comparator": "=", "value": "true" },
           functionABI:   {
             "inputs": [
@@ -69,7 +68,6 @@ export class Lit {
             "type": "function"
           }
         }
-      ]
     ];
   }
 
