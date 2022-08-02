@@ -37,24 +37,24 @@ export class Lit {
    */
   isRoundOperatorAccessControl() {
     return [
-        {
-          conditionType: "evmContract",
-          contractAddress: "0x22c0e3edc90f6a890a259130b416cd5f3ee4aca0",
-          chain: "goerli",
-          functionName: "hasRole",
-          functionParams: [ "0xec61da14b5abbac5c5fda6f1d57642a264ebd5d0674f35852829746dfb8174a5", "0x5cdb35fADB8262A3f88863254c870c2e6A848CcA" ],
-          returnValueTest: { "comparator": "=", "value": "true" },
-          functionABI: {
-            "inputs": [
-              { "internalType": "bytes32", "name": "role", "type": "bytes32" },
-              { "internalType": "address", "name": "account", "type": "address" }
-            ],
-            "name": "hasRole",
-            "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-            "stateMutability": "view",
-            "type": "function"
-          },
-        }
+      {
+        // conditionType: "evmContract",
+        contractAddress: "0x22c0e3edc90f6a890a259130b416cd5f3ee4aca0",
+        chain: "goerli",
+        functionName: "hasRole",
+        functionParams: [ "0xec61da14b5abbac5c5fda6f1d57642a264ebd5d0674f35852829746dfb8174a5", "0x5cdb35fADB8262A3f88863254c870c2e6A848CcA" ],
+        returnValueTest: { "comparator": "=", "value": "true" },
+        functionAbi: {
+          "inputs": [
+            { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+            { "internalType": "address", "name": "account", "type": "address" }
+          ],
+          "name": "hasRole",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+          "stateMutability": "view",
+          "type": "function"
+        },
+      }
     ];
   }
 
