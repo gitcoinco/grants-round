@@ -40,34 +40,20 @@ export class Lit {
         {
           conditionType: "evmContract",
           contractAddress: "0x22c0e3edc90f6a890a259130b416cd5f3ee4aca0",
-          chain: "Goerli",
+          chain: "goerli",
           functionName: "hasRole",
           functionParams: [ "0xec61da14b5abbac5c5fda6f1d57642a264ebd5d0674f35852829746dfb8174a5", "0x5cdb35fADB8262A3f88863254c870c2e6A848CcA" ],
           returnValueTest: { "comparator": "=", "value": "true" },
-          functionABI:   {
+          functionABI: {
             "inputs": [
-              {
-                "internalType": "bytes32",
-                "name": "role",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "address",
-                "name": "account",
-                "type": "address"
-              }
+              { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+              { "internalType": "address", "name": "account", "type": "address" }
             ],
             "name": "hasRole",
-            "outputs": [
-              {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-              }
-            ],
+            "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
             "stateMutability": "view",
             "type": "function"
-          }
+          },
         }
     ];
   }
@@ -139,7 +125,6 @@ export class Lit {
     // Obtain Auth Signature to verify signer is wallet owner
     const authSig = await LitJsSdk.checkAndSignAuthMessage({ chain });
 
-    
     // Obtaining the Decrypted Symmetric Key
     const symmetricKey = await this.litNodeClient.getEncryptionKey({
       accessControlConditions: this.isRoundOperatorAccessControl(),
