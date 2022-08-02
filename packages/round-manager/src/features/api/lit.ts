@@ -56,7 +56,6 @@ export class Lit {
         },
         chain: "goerli",
         returnValueTest:{
-          "key": "",
           "comparator": "=",
           "value": "true"
         },
